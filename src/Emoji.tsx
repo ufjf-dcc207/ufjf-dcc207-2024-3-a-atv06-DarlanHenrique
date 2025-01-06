@@ -4,9 +4,6 @@ import { useState } from "react";
 const EMOJIS = new Map<string, string>(
     [
         ["happy", "😊"],
-        ["sad", "😢"],
-        ["angry", "😡"],
-        ["sick", "🤢"],
         ["dead", "💀"],
         ["programming", "👨‍💻"],
     ],
@@ -14,7 +11,7 @@ const EMOJIS = new Map<string, string>(
 //EMOJIS.set("happy", "😊");
 
 export default function Emoji() { 
-  let [situation, setSituation] = useState("any");
+  const [situation, setSituation] = useState("");
 
   function toHappy() {
     setSituation("happy");    
@@ -24,12 +21,17 @@ export default function Emoji() {
     setSituation("dead");    
   }
 
+function toWork() {
+    setSituation("programming");
+}
+
   return (
     <div className="emoji">
         <div className="face">{EMOJIS.get(situation) || "🤡"}</div>
         <div className="actions">
         <button onClick={toHappy}>Vivo</button>
         <button onClick={toDead}>Morto</button>
+        <button onClick={toWork}>Trabalhando</button>
         </div>
     </div>
 )
