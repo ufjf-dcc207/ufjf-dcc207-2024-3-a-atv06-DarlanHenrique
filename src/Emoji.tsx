@@ -25,16 +25,18 @@ export default function Emoji() {
 
  function switchStatus() {
     switch (situation) { 
-    case "happy":
-        setSituation("dead");
-        break;
-    case "dead":
-        setSituation("programming");
-        break;
-    case "":
-    case "programming":
-        setSituation("happy");
-        break;
+        case "happy":
+            setSituation("dead");
+            break;
+        case "dead":
+            setSituation("programming");
+            break;
+        case "programming":
+            setSituation("happy");
+            break;
+        default:
+            setSituation("happy");
+            break;
     }
   }
 
