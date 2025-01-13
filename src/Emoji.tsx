@@ -1,3 +1,4 @@
+import Attribute from "./Attribute";
 import "./Emoji.css";
 import { useState } from "react";
 
@@ -43,6 +44,12 @@ export default function Emoji() {
   return (
     <div className="emoji">
       <div className="face">{EMOJIS.get(situation) || "🤡"}</div>
+      <div className="attributes">
+        <Attribute icon="💗" />
+        <Attribute icon="⚡" />
+        <Attribute icon="💧" />
+        <Attribute icon="🍖" />
+      </div>
       <div className="actions">
         <button onClick={toHappy}>Vivo</button>
         <button onClick={toDead}>Morto</button>
