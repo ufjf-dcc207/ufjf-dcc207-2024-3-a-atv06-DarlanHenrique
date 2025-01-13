@@ -1,3 +1,14 @@
-.inactive {
-  color: #ccc;
+.attribute {
+    display: flex;
+
+    .active {
+        scale: 1.2;
+    }
+    .inactive {
+        filter: grayscale(100%);
+        opacity: 0.4;
+        color: #ccc;
+        margin-left: 0.5em;
+    }
+
 }
