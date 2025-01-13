@@ -41,6 +41,22 @@ export default function Emoji() {
     }
   }
 
+  function onAlimentar() {
+
+  }
+
+  function OnHidratar() {
+
+  }
+
+  function onLigaDesligaLuz() {
+
+  }
+
+  function onCiclo() {
+
+  }
+
   return (
     <div className="emoji">
       <div className="face">{EMOJIS.get(situation) || "🤡"}</div>
@@ -51,10 +67,10 @@ export default function Emoji() {
         <Attribute icon="🍖" />
       </div>
       <div className="actions">
-        <button onClick={toHappy}>Vivo</button>
-        <button onClick={toDead}>Morto</button>
-        <button onClick={toWork}>Programando</button>
-        <button onClick={switchStatus}>Alternar Situação</button>
+        <button onClick={onAlimentar}>Alimentar</button>
+        <button onClick={OnHidratar}>Hidratar</button>
+        <button onClick={onLigaDesligaLuz}>Ligar/Desligar Luz</button>
+        <button onClick={onCiclo}>Ciclo</button>
       </div>
     </div>
   );
