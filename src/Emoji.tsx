@@ -12,34 +12,34 @@ const EMOJIS = new Map<string, string>([
 export default function Emoji() {
   const [situation, setSituation] = useState("");
 
-  function toHappy() {
-    setSituation("happy");
-  }
+//   function toHappy() {
+//     setSituation("happy");
+//   }
 
-  function toDead() {
-    setSituation("dead");
-  }
+//   function toDead() {
+//     setSituation("dead");
+//   }
 
-  function toWork() {
-    setSituation("programming");
-  }
+//   function toWork() {
+//     setSituation("programming");
+//   }
 
- function switchStatus() {
-    switch (situation) { 
-        case "happy":
-            setSituation("dead");
-            break;
-        case "dead":
-            setSituation("programming");
-            break;
-        case "programming":
-            setSituation("happy");
-            break;
-        default:
-            setSituation("happy");
-            break;
-    }
-  }
+//  function switchStatus() {
+//     switch (situation) { 
+//         case "happy":
+//             setSituation("dead");
+//             break;
+//         case "dead":
+//             setSituation("programming");
+//             break;
+//         case "programming":
+//             setSituation("happy");
+//             break;
+//         default:
+//             setSituation("happy");
+//             break;
+//     }
+//   }
 
   function onAlimentar() {
 
@@ -61,10 +61,10 @@ export default function Emoji() {
     <div className="emoji">
       <div className="face">{EMOJIS.get(situation) || "🤡"}</div>
       <div className="attributes">
-        <Attribute icon="💗" />
-        <Attribute icon="⚡" />
-        <Attribute icon="💧" />
-        <Attribute icon="🍖" />
+        <Attribute icon="💗" value={3} />
+        <Attribute icon="⚡" value={3} />
+        <Attribute icon="💧" value={3} />
+        <Attribute icon="🍖" value={3} />
       </div>
       <div className="actions">
         <button onClick={onAlimentar}>Alimentar</button>
